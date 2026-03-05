@@ -1,11 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Mi primera página</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowAngy | Página Profesional</title>
+    <style>
+        /* ESTILOS PROFESIONALES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 100px 0 50px;
+            animation: fadeIn 2s ease-in;
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 50px 0;
+        }
+        
+        .skill-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            width: 250px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .skill-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: white;
+            border-color: white;
+            transform: scale(1.05);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .project-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(0,0,0,0.2);
+            margin-top: 60px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .skill-card {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>¡Hola GitHub!</h1>
-    <p>Esta es mi primera página web desde GitHub.</p>
-    <p>Estoy aprendiendo a usar repositorios.</p>
+    <div class="container">
+        <header>
+            <h1>✨ FlowAngy ✨</h1>
+            <p class="subtitle">Desarrollador en formación | Creador de contenido digital | Amante de la tecnología</p>
+            <a href="#proyectos" class="btn">Ver mis proyectos</a>
+        </header>
+        
+        <section id="habilidades">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 40px;">⚡ Habilidades</h2>
+            <div class="skills">
+                <div class="skill-card">
+                    <h3>HTML5</h3>
+                    <p>Estructura semántica y accesible</p>
+                </div>
+                <div class="skill-card">
+                    <h3>CSS3</h3>
+                    <p>Diseños modernos y responsivos</p>
+                </div>
+                <div class="skill-card">
+                    <h3>GitHub</h3>
+                    <p>Control de versiones y colaboración</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="proyectos">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 40px;">🚀 Mis Proyectos</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Mi Primer Repo</h3>
+                    <p>El inicio de todo. Mi primer repositorio en GitHub donde aprendí los fundamentos.</p>
+                    <p style="margin-top: 15px;">🔗 <a href="#" style="color: white;">Ver proyecto</a></p>
+                </div>
+                <div class="project-card">
+                    <h3>Página Profesional</h3>
+                    <p>Estás viendo este proyecto ahora mismo. Una web moderna con animaciones.</p>
+                    <p style="margin-top: 15px;">🔗 <a href="#" style="color: white;">Ver proyecto</a></p>
+                </div>
+                <div class="project-card">
+                    <h3>Próximo Proyecto</h3>
+                    <p>Algo increíble viene en camino. ¡Mantente atento!</p>
+                    <p style="margin-top: 15px;">🔗 Próximamente</p>
+                </div>
+            </div>
+        </section>
+        
+        <section style="text-align: center;">
+            <h2 style="font-size: 2.5em; margin-bottom: 30px;">📫 ¿Hablamos?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">¿Tienes un proyecto en mente? ¡Colaboremos!</p>
+            <a href="#" class="btn" style="background: white; color: #764ba2;">Contáctame</a>
+        </section>
+        
+        <footer>
+            <p>© 2024 FlowAngy - Creado con 💜 mientras aprendía GitHub</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">"El viaje de mil millas comienza con un primer commit"</p>
+        </footer>
+    </div>
 </body>
 </html>
